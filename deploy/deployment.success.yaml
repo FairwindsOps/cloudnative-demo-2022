@@ -6,7 +6,13 @@ metadata:
     app: nginx
     costCenterCode: foo
 spec:
+  selector:
+    matchLabels:
+      app: nginx-good
   template:
+    metadata:
+      labels:
+        app: nginx-good
     spec:
       containers:
       - name: nginx
