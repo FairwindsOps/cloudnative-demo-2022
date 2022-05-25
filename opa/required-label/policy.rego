@@ -13,7 +13,7 @@ labelRequired[actionItem] {
     "description": "All workloads at our organization must explicitly set a costCenterCode label. [Read more](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)",
     "remediation": "Please set `metadata.labels.costCenterCode`",
     "category": "Reliability",
-    "severity": 0.5
+    "severity": 0.9
   }
 }
 
