@@ -2,6 +2,7 @@ options:
   baseBranch: main
   organization: cloudnative-demo-2022
   repositoryName: cloudnative-repo
+  setExitCode: true
 
 reports:
   polaris:
