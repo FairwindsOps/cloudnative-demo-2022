@@ -5,6 +5,7 @@ contains(colors, elem) {
 }
 
 labelRequired[actionItem] {
+  input.kind = "Deployment"
   labels = { x | input.metadata.labels[x] }
   not contains(labels, "costCenterCode")
 
