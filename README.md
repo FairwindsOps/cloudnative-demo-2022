@@ -95,13 +95,17 @@ Next, we have to add a new Kubernetes Cluster to Fairwinds Insights:
 * Find the "Open Policy Agent" report and click "Quick Add"
 * Click "Ready to install" at the top of the page
 * Copy the values.yaml files
-* Add the following to get the latest OPA features
+* Install the agent (note the version should be `2.1.*`):
 ```
-opa:
-  enabled: true
-  image:
-    tag: 2.0
+helm repo add fairwinds-stable https://charts.fairwinds.com/stable
+helm upgrade --install insights-agent fairwinds-stable/insights-agent -f values.yaml \
+  --version "2.1.*" \
+  --create-namespace \
+  --namespace insights-agent \
+  --wait \
+  --atomic
 ```
+
 * Run the `helm upgrade` command
 
 Once your `helm` command completes, you can see the new Action Items by visiting
@@ -127,13 +131,16 @@ Next we need to install the admission controller itself:
 * Navigate back to the Hub
 * Click "Ready to Reinstall" at the top
 * Copy values.yaml again
-* Add the following to your values.yaml to get the latest admission controller features
-```yaml
-insights-admission:
-  image:
-    tag: "1.3"
+* Re-run the `helm install` command (note version should be `2.1.*`):
+```bash
+helm repo add fairwinds-stable https://charts.fairwinds.com/stable
+helm upgrade --install insights-agent fairwinds-stable/insights-agent -f values.yaml \
+  --version "2.1.*" \
+  --create-namespace \
+  --namespace insights-agent \
+  --wait \
+  --atomic
 ```
-* Re-run the `helm install` command
 
 ### Try to deploy
 Now we can trigger the admission controller. Run:
