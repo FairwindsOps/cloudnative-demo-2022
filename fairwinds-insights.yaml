@@ -1,3 +1,8 @@
 options:
   organization: cloudnative-demo-2022
+  repositoryName: cloudnative-repo
+
+manifests:
+  yaml:
+    - ./deploy/
 
