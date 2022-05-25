@@ -3,6 +3,12 @@ options:
   organization: cloudnative-demo-2022
   repositoryName: cloudnative-repo
 
+reports:
+  polaris:
+    enabled: false
+  trivy:
+    enabled: false
+
 manifests:
   yaml:
     - ./deploy/
