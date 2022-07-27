@@ -4,6 +4,7 @@ metadata:
   name: bad-deployment
   labels:
     foo: bar
+    costCenterCode: "1234"
 spec:
   selector:
     matchLabels:
