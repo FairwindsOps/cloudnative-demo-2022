@@ -1,7 +1,7 @@
 options:
   baseBranch: main
   organization: cloudnative-demo-2022
-  repositoryName: cloudnative-repo
+  repositoryName: cloudnative-repo-rbren
   setExitCode: true
 
 reports:
